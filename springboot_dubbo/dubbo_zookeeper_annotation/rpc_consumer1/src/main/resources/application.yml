@@ -1,0 +1,12 @@
+server:
+  port: 8082
+dubbo:
+  application:
+    name: rpc_consumer
+  registry:
+    address: zookeeper://139.224.49.74:2181
+    check: false   #关闭注册中心检查
+  consumer:
+    check: false   #关闭所有服务提供者启动检查
+    timeout: 2000  #服务超时时间 (单位 毫秒  默认 1000)
+    retries: 3     #服务重试次数不包含第一次调用(注意使用服务重试需要保证接口幂等性)

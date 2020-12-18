@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://dubbo.apache.org/schema/dubbo
+       http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="rpc_consumer2"/>
+    
+    <dubbo:registry protocol="zookeeper" address="139.224.49.74:2181"/>
+    <!--reference:check服务级别检查-->
+    <dubbo:reference id="userService" interface="com.study.service.UserService"  stub="com.study.controller.UserServiceStub"/>
+
+</beans>

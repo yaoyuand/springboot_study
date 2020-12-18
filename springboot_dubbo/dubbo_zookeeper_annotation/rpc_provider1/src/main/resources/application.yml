@@ -1,0 +1,13 @@
+server:
+  port: 8081
+dubbo:
+  application:
+    name: rpc_provider
+  registry:
+    protocol: zookeeper     #配置注册中心类型
+    address: 139.224.49.74:2181   #配置注册中心地址,也可以配置成 zookeeper:139.224.49.74:2181  集群配置时以逗号分隔
+  protocol:
+    name: dubbo  #协议名称
+    port: 20082  #协议端口
+  scan:
+    base-packages: com.study.service  #配置扫描地址，也可以不配置，在启动类上面添加注解@EnableDubbo
