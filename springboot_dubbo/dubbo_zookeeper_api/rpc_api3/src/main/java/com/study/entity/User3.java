@@ -2,7 +2,7 @@ package com.study.entity;
 
 import java.io.Serializable;
 
-public class User implements Serializable {
+public class User3 implements Serializable {
     private static final long serialVersionUID = -4173182440321198350L;
     private Integer age;
 
@@ -34,7 +34,7 @@ public class User implements Serializable {
         this.address = address;
     }
 
-    public User(Integer age, String name, String address) {
+    public User3(Integer age, String name, String address) {
         this.age = age;
         this.name = name;
         this.address = address;
