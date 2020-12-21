@@ -33,7 +33,16 @@ public class Config {
         protocolConfig.setPort(20884);
         return protocolConfig;
     }
-
+    /**
+     * 元数据中心配置
+     * 接口详细信息
+     * */
+    @Bean
+    public MetadataReportConfig metadataReportConfig(){
+        MetadataReportConfig metadataReportConfig=new MetadataReportConfig();
+        metadataReportConfig.setAddress("zookeeper://139.224.49.74:2181");
+        return metadataReportConfig;
+    }
     @Bean
     public ServiceConfig<UserService3> serviceConfig(UserService3 userService3){
         ServiceConfig serviceConfig=new ServiceConfig();

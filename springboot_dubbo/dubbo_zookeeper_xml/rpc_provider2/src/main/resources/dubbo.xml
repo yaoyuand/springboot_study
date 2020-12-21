@@ -12,6 +12,9 @@
     <!--check注册中心检查-->
     <dubbo:registry protocol="zookeeper"  address="139.224.49.74:2181"/>
 
+    <!--dubbo元数据配置，新版本功能，主要应用于测试-->
+    <dubbo:metadata-report address="zookeeper://139.224.49.74:2181"/>
+
     <dubbo:protocol name="dubbo" port="20883"/>
 
     <bean id="invoke" class="com.study.service.Invoke"/>
