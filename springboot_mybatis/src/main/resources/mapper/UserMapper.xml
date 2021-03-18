@@ -16,7 +16,7 @@
     <select id="page" resultMap="BaseResult" parameterType="map">
         select
         <include refid="Base_Column"/>
-        from user where 1==1
+        from user where 1=1
         <if test="name!=null">
             and name like #{name}
         </if>
