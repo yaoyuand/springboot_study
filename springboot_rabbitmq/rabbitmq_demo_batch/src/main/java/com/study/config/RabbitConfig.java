@@ -12,6 +12,7 @@ import org.springframework.scheduling.TaskScheduler;
 import org.springframework.scheduling.concurrent.ConcurrentTaskScheduler;
 
 /**
+ * 批量发送消息
  * @Author ytj
  * @Date 2021/3/24 10:11
  */
