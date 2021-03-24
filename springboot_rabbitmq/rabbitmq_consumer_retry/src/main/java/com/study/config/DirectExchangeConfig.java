@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * Direct Exchange 示例的配置类
- * 消费重试
+ * 消费消息重试和发送消息重试
  * @Author ytj
  * @Date 2021/3/24 14:25
  */
