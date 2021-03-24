@@ -12,7 +12,7 @@
     <artifactId>rabbitmq_demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>rabbitmq_demo</name>
-    <description>Demo project for Spring Boot</description>
+    <description>springboot集成rabbitmq四种exchange</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>

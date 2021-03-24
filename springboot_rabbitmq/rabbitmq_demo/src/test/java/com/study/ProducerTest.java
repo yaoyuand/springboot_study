@@ -1,10 +1,8 @@
 package com.study;
 
+import com.study.message.BroadcastMessage;
 import com.study.message.Demo4Message;
-import com.study.producer.Demo1Producer;
-import com.study.producer.Demo2Producer;
-import com.study.producer.Demo3Producer;
-import com.study.producer.Demo4Producer;
+import com.study.producer.*;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -35,6 +33,9 @@ public class ProducerTest {
 
     @Autowired
     private Demo4Producer demo4Producer;
+
+    @Autowired
+    private BroadcastProducer broadcastProducer;
 
     @Test
     public void testSyncsend() throws Exception{
@@ -100,6 +101,15 @@ public class ProducerTest {
         int id=(int)(System.currentTimeMillis()/1000);
         this.demo4Producer.synsend(id,"test");
         logger.info("[testDemo4SynSendB],发送编号:{}发送完成",id);
+        new CountDownLatch(1).await();
+    }
+
+
+    @Test
+    public void testBroadcast() throws Exception{
+        int id = (int) (System.currentTimeMillis() / 1000);
+        this.broadcastProducer.synSend(id);
+        logger.info("[testBroadcast][发送编号:{},发送成功]",id);
         new CountDownLatch(1).await();
     }
 
