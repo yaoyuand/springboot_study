@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * 消息定时发送
  * @Author ytj
  * @Date 2021/3/24 15:13
  */
