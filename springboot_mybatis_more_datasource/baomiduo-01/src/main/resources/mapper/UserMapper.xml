@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.mapper.UserMapper">
+
+    <sql id="user_column">
+        id,username
+    </sql>
+
+    <select id="selectById" parameterType="Integer" resultType="com.study.entity.User">
+        select
+          <include refid="user_column"/>
+          from users where id=#{id}
+    </select>
+    
+
+</mapper>
